@@ -8,6 +8,7 @@ Feature: Go to first result of Google search
     And the user type 'test automation' into the search field
     And the user clicks on search button
 
+  @first_result
   Scenario: Go to first result page
     When the user clicks on the first result link
     Then the first result page is displayed

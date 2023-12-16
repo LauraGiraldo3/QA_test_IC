@@ -5,6 +5,7 @@ Feature: Google search
 
   Background: Go to Google home page
     Given the user has accessed to Google home page
+    Given the Google home page is displayed
 
   @google_search
   Scenario: Make a Google search
