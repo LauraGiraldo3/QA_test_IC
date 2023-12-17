@@ -1,11 +1,6 @@
 from behave import step
 from pom.results_page import ResultsPage
-from dotenv import load_dotenv
-import os
 from utils.asserts_manager import *
-
-
-load_dotenv()
 
 
 @step("the user clicks on the first result link")

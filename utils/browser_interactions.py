@@ -7,7 +7,6 @@ from selenium.webdriver.support import expected_conditions as EC
 
 def get_locator(raw_locator: tuple) -> tuple:
     """Function, takes a tuple with a locator
-
     :param raw_locator: A tuple with a locator. First position for a string with the strategy and the second
         with the selector
     :returns: A tuple with the strategy BY object and the selector
@@ -33,15 +32,16 @@ class BrowserInteractions:
         self._driver.get(url)
 
     def click_element(self, raw_locator: tuple):
-
+        """Click an element
+        :param raw_locator: tuple with locator type and selector
+        """
         element = WebDriverWait(self._driver, self.time_out).until(
             EC.element_to_be_clickable(get_locator(raw_locator))
         )
         element.click()
 
     def input_text(self, raw_locator: tuple, text: str) -> bool:
-        """Fill a input field with a string
-
+        """Fill an input field with a string
         :param raw_locator: Field to fill. Tuple contains two strings for the strategy and selector.
         :param text: String to put into field
         :return: True if the field was found and filled. False if field was not found.
@@ -58,7 +58,6 @@ class BrowserInteractions:
 
     def element_is_visible(self, raw_locator: tuple) -> bool:
         """Checks if an element is visible
-
         :param raw_locator: Tuple contains two strings for the strategy and selector for the element to check
         :returns: True if the element is visible. False if the element is not visible.
         """

@@ -1,4 +1,3 @@
-import os
 from utils.browser_interactions import BrowserInteractions
 from pom.locators.results_page_locators import ResultsPageLocators
 from pom.first_result_page import FirstResultPage

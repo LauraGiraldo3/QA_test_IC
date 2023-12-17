@@ -1,11 +1,6 @@
 from behave import step
 from pom.first_result_page import FirstResultPage
-from dotenv import load_dotenv
-import os
 from utils.asserts_manager import *
-
-
-load_dotenv()
 
 
 @step("the first result page is displayed")
