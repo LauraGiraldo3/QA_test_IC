@@ -19,7 +19,7 @@ class ResultsPage:
         return True
 
     def to_first_result_page(self):
-        self.browser_interactions.click_element(ResultsPageLocators.FIRST_RESULT)
+        self.browser_interactions.click_element(ResultsPageLocators.RESULTS)
         return FirstResultPage(self.browser_interactions)
 
 
